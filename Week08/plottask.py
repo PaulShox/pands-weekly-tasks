@@ -11,11 +11,11 @@ import matplotlib.pyplot as plt
 
 # 1. Histogram Plot:
 
-mean_val = 2
+mean_val = 5
 std_dev = 2
 size = 1000
 
-x = random.normal(loc=mean_val, scale=std_dev, size=size)
+x = random.normal(loc=mean_val, scale=std_dev, size=size) # generates a normal distribution based on the values applied to the variables
 
 plt.hist(x, bins=20, edgecolor='black')
 plt.axvline(mean_val, ls='--', color='red', linewidth=1, label='Mean(μ)')
@@ -28,15 +28,16 @@ plt.show()
 # 2. Funtion Plot:
 
 def f(x):
-    return x**3
+    return x**3 # a function that takes a value, x, and returns the cubed value of x
 
-x = np.linspace(0, 10)
-y = f(x)
+x = np.linspace(0, 10) # applies x values of 0 through 10
+y = f(x) # calls the function f by applying values 0 through 10 to the function 
 
 plt.title('Plot of funtion f(x)=x³')
 plt.xlabel('x value')
 plt.ylabel('x³ value')
 plt.grid(True)
+plt.legend()
 
 plt.plot(x,y)
 plt.show()
